@@ -1,0 +1,1 @@
+Your run compiles into the live checker and a public repo under your name. The checker carries your calibration — a stranger gets your read, not a generic rubric. Verification runs before anything ships. Every shipped file must open on the builder's specimen, not a pack demo.
