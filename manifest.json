@@ -1,0 +1,72 @@
+{
+  "verificationToken": "01KZG5QCWGV7ZB5ZTHC1D5K07K",
+  "courseId": "2ad65768-198c-5614-ba63-948602ecc629",
+  "chapterId": "f0486d99-9629-55ed-b575-6970468eebb0",
+  "templateId": "baw_c002_ch01",
+  "variants": [
+    {
+      "id": "README.md",
+      "path": "README.md"
+    },
+    {
+      "id": "charter.md",
+      "path": "charter.md"
+    },
+    {
+      "id": "blueprints/task-checker.md",
+      "path": "blueprints/task-checker.md"
+    },
+    {
+      "id": "prompts/task-check-pack.md",
+      "path": "prompts/task-check-pack.md"
+    },
+    {
+      "id": "METHOD.md",
+      "path": "METHOD.md"
+    },
+    {
+      "id": "VERIFY.md",
+      "path": "VERIFY.md"
+    },
+    {
+      "id": ".ep/provenance.json",
+      "path": ".ep/provenance.json.md"
+    },
+    {
+      "id": "skills/task-advisor.skill.md",
+      "path": "skills/task-advisor.skill.md"
+    },
+    {
+      "id": "data/seeded-tasks.md",
+      "path": "data/seeded-tasks.md"
+    },
+    {
+      "id": "tests/probe-board.md",
+      "path": "tests/probe-board.md"
+    },
+    {
+      "id": "tests/pass-gate.md",
+      "path": "tests/pass-gate.md"
+    },
+    {
+      "id": "tests/probes.jsonl",
+      "path": "tests/probes.jsonl"
+    },
+    {
+      "id": "tests/run-local.md",
+      "path": "tests/run-local.md"
+    },
+    {
+      "id": "STORY.md",
+      "path": "STORY.md"
+    },
+    {
+      "id": "exports/sample-asks.md",
+      "path": "exports/sample-asks.md"
+    }
+  ],
+  "totalScore": null,
+  "verdict": null,
+  "compiledAt": "2026-08-08T07:52:13.969Z",
+  "compositionMode": "deterministic_degraded"
+}
