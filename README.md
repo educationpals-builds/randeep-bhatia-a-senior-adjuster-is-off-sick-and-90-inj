@@ -1,37 +1,37 @@
-# Education Pals Build Pack
+# Should AI Do This?
 
-- Course: `2ad65768-198c-5614-ba63-948602ecc629`
-- Chapter: `f0486d99-9629-55ed-b575-6970468eebb0`
-- Template: `baw_c002_ch01`
-- Compiled: 2026-08-08T07:52:13.969Z
-- Verification token: `01KZG5QCWGV7ZB5ZTHC1D5K07K`
-- Composition mode: `deterministic_degraded`
-- Workshop publication: `01KZG5N9JWS15640QJSV32DHSN`
-- Proof challenge: `b8b16b38c3eb1fbef1bded91d5ce7543`
-- Artifact type: `baw.v3`
-- Repository: https://github.com/educationpals-builds/randeep-bhatia-a-senior-adjuster-is-off-sick-and-90-inj
+> Should AI Do This?
 
-## Variants
+Worked example domain: A senior adjuster is off sick and 90 injury claims are waiting. Delia's boss suggests the model read each one and rank who needs a nurse's call today.
 
-- `README.md` → `README.md`
-- `charter.md` → `charter.md`
-- `blueprints/task-checker.md` → `blueprints/task-checker.md`
-- `prompts/task-check-pack.md` → `prompts/task-check-pack.md`
-- `METHOD.md` → `METHOD.md`
-- `VERIFY.md` → `VERIFY.md`
-- `.ep/provenance.json` → `.ep/provenance.json.md`
-- `skills/task-advisor.skill.md` → `skills/task-advisor.skill.md`
-- `data/seeded-tasks.md` → `data/seeded-tasks.md`
-- `tests/probe-board.md` → `tests/probe-board.md`
-- `tests/pass-gate.md` → `tests/pass-gate.md`
-- `tests/probes.jsonl` → `tests/probes.jsonl`
-- `tests/run-local.md` → `tests/run-local.md`
-- `STORY.md` → `STORY.md`
-- `exports/sample-asks.md` → `exports/sample-asks.md`
+## Spec
+Open on the learner's specimen. How this checker was built, the builder's own task + verdict as the worked example, and the one-paste rebuild block.
 
-## Files
-
-- `manifest.json` — verification manifest
-- `instructions.md` — paste tips per variant
+## Learner field bag
+- **__desk_active_time_ms**: 178697
+- **__desk_reached_compile**: true
+- **__desk_reached_index**: 4
+- **__desk_scenario_blurb**: A senior adjuster is off sick and 90 injury claims are waiting. Delia's boss suggests the model read each one and rank who needs a nurse's call today.
+- **__desk_scenario_id**: s5
+- **__desk_stage_index**: 4
+- **__desk_view**: compile
+- **__desk_wall_clock_ms**: 178697
+- **advisor_run_verdict**: Approved with mandatory human sign-off on every low-priority label before 4pm.
+- **advisor_stance**: Skeptical: treat model ranking as a sorting aid, not a medical triage decision, given how thin claim notes can be.
+- **board_reading**: Board sees this as short-staffed triage under time pressure — reasonable to speed up sorting, risky to let it decide who waits.
+- **deciding_dial**: a_confident_wrong_answer_is_survivable
+- **decision_deadline**: Today, 4pm queue cutoff
+- **dial_ratings**: {"fits_in_text":4,"works_one_token_at_a_time":2,"nothing_to_look_up_or_remember":2,"someone_can_check_the_output":3,"a_confident_wrong_answer_is_survivable":1}
+- **failure_note**: It ranked a spinal-injury claim below three sprained-ankle files because the notes were shorter and less alarming-sounding.
+- **flip_condition**: If any deprioritized claim later shows a hospital admission or worsening note, we stop unsupervised ranking immediately.
+- **learner_probes**: [{"entry":"Probe: rank from incomplete notes only — no lookup allowed."},{"entry":"Probe: one-pass rank when the task really needs a multi-step plan."}]
+- **pass_gate**: Passes only if every 'skip today' claim gets a second human glance and reasons are shown, not just scores.
+- **prediction_note**: Input: 90 claim summary texts. Output: ranked list of claim IDs. I predict short, thin-text claims outrank longer-noted serious injuries.
+- **reshape_move**: Force the model to output the specific injury detail and time-since-incident it used, not just a rank number.
+- **task_description**: Read the 90 open bodily-injury claim summaries and rank which need a nurse case-manager call today.
+- **task_stream**: Batch of 90 claim summaries pulled at 9am from the adjuster's queue, run once before lunch, rechecked against new notes at 2pm.
+- **verdict_call**: Use it to draft the ranked list, but a licensed adjuster reviews every claim flagged 'no call needed' before end of day.
+- **what_it_decides**: Which injured claimants get a call today and which wait until the adjuster returns
+- **who_wants_it**: VP of Operations, covering for an adjuster on leave and unwilling to add overtime
 
 <!-- educationpals-build-verified -->
